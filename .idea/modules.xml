@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/CFS_PJ.iml" filepath="$PROJECT_DIR$/.idea/CFS_PJ.iml" />
+      <module fileurl="file://$PROJECT_DIR$/apigateway/apigateway/apigateway.iml" filepath="$PROJECT_DIR$/apigateway/apigateway/apigateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ecoomerce/ecoomerce/ecoomerce.iml" filepath="$PROJECT_DIR$/ecoomerce/ecoomerce/ecoomerce.iml" />
+      <module fileurl="file://$PROJECT_DIR$/firstservice/firstservice/firstservice.iml" filepath="$PROJECT_DIR$/firstservice/firstservice/firstservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/secondservice/secondservice/secondservice.iml" filepath="$PROJECT_DIR$/secondservice/secondservice/secondservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/userservice/userservice/userservice.iml" filepath="$PROJECT_DIR$/userservice/userservice/userservice.iml" />
+    </modules>
+  </component>
+</project>
