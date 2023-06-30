@@ -1,0 +1,11 @@
+server:
+  port: 8082
+
+Spring:
+  application:
+    name: my-second-service
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false

@@ -4,12 +4,13 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/ecoomerce/ecoomerce/pom.xml" />
-        <option value="$PROJECT_DIR$/userservice/userservice/pom.xml" />
         <option value="$PROJECT_DIR$/apigateway/apigateway/pom.xml" />
+        <option value="$PROJECT_DIR$/userservice/userservice/pom.xml" />
         <option value="$PROJECT_DIR$/firstservice/firstservice/pom.xml" />
         <option value="$PROJECT_DIR$/secondservice/secondservice/pom.xml" />
+        <option value="$PROJECT_DIR$/communityservice/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="11" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK" />
 </project>

@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/apigateway/apigateway/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/apigateway/apigateway/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/communityservice/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ecoomerce/ecoomerce/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/ecoomerce/ecoomerce/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/firstservice/firstservice/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/firstservice/firstservice/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/secondservice/secondservice/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/secondservice/secondservice/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/userservice/userservice/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/userservice/userservice/src/main/resources" charset="UTF-8" />
   </component>
 </project>

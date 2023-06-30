@@ -2,11 +2,13 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="apigateway" />
+        <module name="communityservice" />
         <module name="secondservice" />
         <module name="firstservice" />
         <module name="ecoomerce" />
@@ -14,19 +16,19 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="apigateway" target="11" />
+      <module name="apigateway" target="1.5" />
+      <module name="communityservice" target="17" />
       <module name="ecoomerce" target="11" />
       <module name="firstservice" target="11" />
-      <module name="secondservice" target="11" />
+      <module name="secondservice" target="1.5" />
       <module name="userservice" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="apigateway" options="-parameters" />
+      <module name="communityservice" options="-parameters" />
       <module name="ecoomerce" options="-parameters" />
       <module name="firstservice" options="-parameters" />
-      <module name="secondservice" options="-parameters" />
       <module name="userservice" options="-parameters" />
     </option>
   </component>
