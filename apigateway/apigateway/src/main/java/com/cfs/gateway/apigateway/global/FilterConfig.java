@@ -23,7 +23,12 @@ public class FilterConfig {
                         .filters(f -> f.addRequestHeader("second-request", "second-request-header")
                                 .addResponseHeader("second-response", "second-response-header"))
                         .uri("http://localhost:8082/"))
+                .route(r -> r.path("/member-service/**")
+                        .filters(f -> f.addRequestHeader("member-request", "member-request-header")
+                                .addResponseHeader("member-response", "member-response-header"))
+                        .uri("http://localhost:8083/"))
                 .build();
+
 
     }
 }
