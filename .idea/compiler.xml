@@ -16,7 +16,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="apigateway" target="1.5" />
+      <module name="apigateway" target="11" />
       <module name="communityservice" target="17" />
       <module name="ecoomerce" target="11" />
       <module name="firstservice" target="11" />
@@ -26,6 +26,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="apigateway" options="-parameters" />
       <module name="communityservice" options="-parameters" />
       <module name="ecoomerce" options="-parameters" />
       <module name="firstservice" options="-parameters" />
