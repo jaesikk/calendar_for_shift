@@ -1,10 +1,10 @@
-package com.cfs.secondservice.secondservice;
+package com.example.calendar;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SecondserviceApplicationTests {
+class CalendarApplicationTests {
 
 	@Test
 	void contextLoads() {

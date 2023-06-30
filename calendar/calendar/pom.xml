@@ -8,11 +8,11 @@
 		<version>2.7.12</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.cfs.secondservice</groupId>
-	<artifactId>secondservice</artifactId>
+	<groupId>com.example</groupId>
+	<artifactId>calendar</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>secondservice</name>
-	<description>secondservice</description>
+	<name>calendar</name>
+	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
 		<spring-cloud.version>2021.0.7</spring-cloud.version>
