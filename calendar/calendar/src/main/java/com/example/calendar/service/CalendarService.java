@@ -1,44 +1,55 @@
 package com.example.calendar.service;
 
-import com.example.calendar.repository.CalendarRepository;
 import com.example.calendar.vo.Schedule;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class CalendarService {
+    private int lastScheduleId;
+    private List<Schedule> schedules;
 
-    @Autowired
-    private CalendarRepository calendarRepository;
+    public CalendarService(){
+        lastScheduleId = 0;
+        schedules = new ArrayList<>();
+    }
 
-    public CalendarService(CalendarRepository calendarRepository){
-        this.calendarRepository = calendarRepository;
+    public List<Schedule> schedules(){
+        return schedules;
     }
 
     public Schedule getSchedule(int id) {
-
-        return calendarRepository.getSchedule(id);
+        for(Schedule schedule : schedules){
+            if(schedule.getId() == id){
+                return schedule;
+            }
+        }
+        return null;
     }
 
     public Schedule writeSchedule(String title, String body){
+        int id = lastScheduleId + 1;
+        Schedule schedule = new Schedule(id, title, body);
 
-        return calendarRepository.writeSchedule(title, body);
+        schedules.add(schedule);
+        lastScheduleId = id;
+
+        return schedule;
     }
 
     public void deleteSchedule(int id) {
+        Schedule schedule = getSchedule(id);
 
-        calendarRepository.deleteSchedule(id);
+        schedules.remove(schedule);
     }
 
     public void modifySchedule(int id, String title, String body) {
+        Schedule schedule = getSchedule(id);
 
-        calendarRepository.modifySchedule(id, title, body);
-    }
+        schedule.setTitle(title);
+        schedule.setBody(body);
 
-    public List<Schedule> getSchedules(){
-
-        return calendarRepository.getSchedules();
     }
 }

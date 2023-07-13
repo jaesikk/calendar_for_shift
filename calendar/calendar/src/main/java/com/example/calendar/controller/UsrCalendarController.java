@@ -66,6 +66,6 @@ public class UsrCalendarController {
     @RequestMapping("/usr/calendar/list")
     @ResponseBody
     public List<Schedule> showList(){
-        return calendarService.getSchedules();
+        return calendarService.schedules();
     }
 }
