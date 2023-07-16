@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Schedule {
-    private long id;
+    private int id;
     private String title;
     private String body;
 }

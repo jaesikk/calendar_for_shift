@@ -1,55 +1,46 @@
 package com.example.calendar.service;
 
+import com.example.calendar.repository.CalendarRepository;
 import com.example.calendar.vo.Schedule;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class CalendarService {
-    private int lastScheduleId;
-    private List<Schedule> schedules;
 
-    public CalendarService(){
-        lastScheduleId = 0;
-        schedules = new ArrayList<>();
-    }
+    @Autowired
+    private CalendarRepository calendarRepository;
 
-    public List<Schedule> schedules(){
-        return schedules;
+    public CalendarService(CalendarRepository calendarRepository){
+        this.calendarRepository = calendarRepository;
     }
 
     public Schedule getSchedule(int id) {
-        for(Schedule schedule : schedules){
-            if(schedule.getId() == id){
-                return schedule;
-            }
-        }
-        return null;
+
+        return calendarRepository.getSchedule(id);
     }
 
-    public Schedule writeSchedule(String title, String body){
-        int id = lastScheduleId + 1;
-        Schedule schedule = new Schedule(id, title, body);
+    public int writeSchedule(String title, String body){
 
-        schedules.add(schedule);
-        lastScheduleId = id;
+        calendarRepository.writeSchedule(title, body);
 
-        return schedule;
+        return calendarRepository.getLastInsertId();
     }
 
     public void deleteSchedule(int id) {
-        Schedule schedule = getSchedule(id);
 
-        schedules.remove(schedule);
+        calendarRepository.deleteSchedule(id);
     }
 
     public void modifySchedule(int id, String title, String body) {
-        Schedule schedule = getSchedule(id);
 
-        schedule.setTitle(title);
-        schedule.setBody(body);
+        calendarRepository.modifySchedule(id, title, body);
+    }
 
+    public List<Schedule> getSchedules(){
+
+        return calendarRepository.getSchedules();
     }
 }

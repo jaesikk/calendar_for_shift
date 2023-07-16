@@ -3,8 +3,14 @@ server:
 spring:
   application:
     name: Calendar-service
-
-
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/Calendar_P?useUnicode=true&characterEncoding=utf8&autoReconnect=true&serverTimezone=Asia/Seoul&useOldAliasMetadataBehavior=true&zeroDateTimeNehavior=convertToNull
+    username: root
+    password:
+mybatis:
+  type-aliases-package: com.example.calendar.vo
+  mapper-locations: classpath:mapper/**/*.xml
 eureka:
   client:
     register-with-eureka: true

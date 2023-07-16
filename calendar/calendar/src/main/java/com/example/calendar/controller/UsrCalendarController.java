@@ -18,7 +18,9 @@ public class UsrCalendarController {
     @RequestMapping("/usr/calendar/doAdd")
     @ResponseBody
     public Schedule doAdd(String title, String body){
-        Schedule schedule = calendarService.writeSchedule(title, body);
+        int id = calendarService.writeSchedule(title, body);
+
+        Schedule schedule = calendarService.getSchedule(id);
 
         return schedule;
     }
@@ -66,6 +68,6 @@ public class UsrCalendarController {
     @RequestMapping("/usr/calendar/list")
     @ResponseBody
     public List<Schedule> showList(){
-        return calendarService.schedules();
+        return calendarService.getSchedules();
     }
 }

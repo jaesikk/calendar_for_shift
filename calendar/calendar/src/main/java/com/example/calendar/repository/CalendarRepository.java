@@ -1,56 +1,22 @@
 package com.example.calendar.repository;
 
 import com.example.calendar.vo.Schedule;
-import org.springframework.stereotype.Component;
+import org.apache.ibatis.annotations.Mapper;
 
-import java.util.ArrayList;
 import java.util.List;
 
-@Component
-public class CalendarRepository {
+@Mapper
+public interface CalendarRepository {
 
-    private int lastScheduleId;
-    private List<Schedule> schedules;
+    public List<Schedule> getSchedules();
 
-    public CalendarRepository(){
-        lastScheduleId = 0;
-        schedules = new ArrayList<>();
-    }
+    public Schedule getSchedule(int id);
 
-    public List<Schedule> getSchedules(){
-        return schedules;
-    }
+    public void writeSchedule(String title, String body);
 
-    public Schedule getSchedule(int id) {
-        for(Schedule schedule : schedules){
-            if(schedule.getId() == id){
-                return schedule;
-            }
-        }
-        return null;
-    }
+    public void deleteSchedule(int id);
 
-    public Schedule writeSchedule(String title, String body){
-        int id = lastScheduleId + 1;
-        Schedule schedule = new Schedule(id, title, body);
+    public void modifySchedule(int id, String title, String body);
 
-        schedules.add(schedule);
-        lastScheduleId = id;
-
-        return schedule;
-    }
-
-    public void deleteSchedule(int id) {
-        Schedule schedule = getSchedule(id);
-
-        schedules.remove(schedule);
-    }
-
-    public void modifySchedule(int id, String title, String body) {
-        Schedule schedule = getSchedule(id);
-
-        schedule.setTitle(title);
-        schedule.setBody(body);
-
-    }
+    public int getLastInsertId();
 }
