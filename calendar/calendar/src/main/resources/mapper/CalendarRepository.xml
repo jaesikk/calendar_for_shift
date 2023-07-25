@@ -10,7 +10,8 @@
     </insert>
 
     <delete id="deleteSchedule">
-        DELETE FROM `schedule`
+        UPDATE `schedule`
+        SET delStatus = 1
         WHERE id = #{id}
     </delete>
 
@@ -28,6 +29,7 @@
 
     <select id="getSchedules" resultType="Schedule">
         SELECT * FROM `schedule`
+        WHERE delStatus = 0
         ORDER BY id DESC
     </select>
 

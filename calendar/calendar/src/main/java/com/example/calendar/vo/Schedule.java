@@ -11,4 +11,6 @@ public class Schedule {
     private int id;
     private String title;
     private String body;
+    private boolean delStatus;
+
 }

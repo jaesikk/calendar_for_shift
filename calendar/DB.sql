@@ -7,7 +7,8 @@ USE Calendar_P;
 CREATE TABLE `schedule` (
 	id INT(10) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	title CHAR(100) NOT NULL,
-	`body` TEXT NOT NULL
+	`body` TEXT NOT NULL,
+	delStatus TINYINT(1) UNSIGNED NOT NULL DEFAULT 0 COMMENT '삭제여부 (삭제 전 = 0, 삭제 후 = 1)'
 );
 
 
@@ -23,7 +24,6 @@ SET title = '풋살',
 INSERT INTO `schedule`
 SET title = '조기축구',
 `body` = '6시 참석';
-
 
 SELECT LAST_INSERT_ID();
 SELECT * FROM `schedule`;
